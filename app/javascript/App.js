@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
-import Greeting from './greeting'
+import Greeting from './Greeting'
 
 function App() {
     <Routes>

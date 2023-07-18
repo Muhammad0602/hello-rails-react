@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const randomGreeting = createAsyncThunk('greeting/getRandomGreeting', async() => {
     try {
-        const response = await axios.get('https://127.0.0.1:3000/');
+        const response = await axios.get('/api/messages');
         return response.greeting;
       } catch (error) {
         throw error.response.data.error;

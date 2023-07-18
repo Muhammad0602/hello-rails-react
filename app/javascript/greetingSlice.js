@@ -4,7 +4,8 @@ import axios from 'axios';
 export const randomGreeting = createAsyncThunk('greeting/getRandomGreeting', async() => {
     try {
         const response = await axios.get('/api/messages');
-        return response.greeting;
+        console.log(response)
+        return response.data.greeting;
       } catch (error) {
         throw error.response.data.error;
       }
@@ -26,6 +27,7 @@ const greetingSlice = createSlice({
         })
         .addCase(randomGreeting.fulfilled, (state, action) => {
           state.loading = false;
+          console.log(action)
           state.greeting = action.payload;
         })
         .addCase(randomGreeting.rejected, (state, action) => {

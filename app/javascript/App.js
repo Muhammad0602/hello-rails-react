@@ -4,7 +4,7 @@ import Greeting from './Greeting'
 
 function App() {
     <Routes>
-        <Route path='/' element={<Greeting />} />
+        <Route path='' element={<Greeting />} />
     </Routes>
 }
 

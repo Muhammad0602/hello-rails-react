@@ -12,7 +12,7 @@ function Greeting() {
 
     return (
         <>
-            <p>{greeting}</p>
+            <p>{greeting.greeting}</p>
         </>
     )
 }
